@@ -38,3 +38,6 @@
     state: stopped
   when:
     - coreos_locksmithd_disable
+
+- name: Disable update-engine service
+  service: name=update-engine state=stopped enabled=false
